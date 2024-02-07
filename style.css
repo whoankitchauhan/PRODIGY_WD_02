@@ -1,33 +1,46 @@
+/* Reset default margin, padding, and box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* Body styling */
 body {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column; /* Allow header and stopwatch to be stacked */
-    background: linear-gradient(to right, #172f40, #2c3e50); /* Gradient background */
-  }
-  
-  header {
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    background: linear-gradient(135deg, #2980b9, #7653ff);
-    width: 100%;
-  }
-  
-  #timerHeader {
-    font-size: 1.5em;
-  }
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  background: linear-gradient(to right, #172f40, #2c3e50);
+}
 
+/* Header styling */
+header {
+  color: #f9f9f9;
+  text-align: center;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #2980b9, #7653ff);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Timer header styling */
+#timerHeader {
+  font-size: 1.5em;
+  display: flex;
+  width: 100%;
+}
+
+/* Timer header paragraph styling */
+#timerHeader p {
+  margin: 0 10px;
+}
+
+/* Stopwatch container styling */
 .stopwatch-container {
   text-align: center;
   border-radius: 20px;
@@ -36,19 +49,18 @@ body {
   width: 100%;
   margin: auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(
-    135deg,
-    #2980b9,
-    #7653ff
-  ); /* Gradient background */
+  background: linear-gradient(135deg, #2980b9, #7653ff);
 }
 
+/* Stopwatch styling */
 .stopwatch {
   font-size: 4em;
+  font-weight: 600;
   margin-bottom: 40px;
   color: #fff;
 }
 
+/* Buttons styling */
 .btns {
   display: flex;
   align-items: center;
@@ -77,10 +89,12 @@ button:active {
   box-shadow: none;
 }
 
+/* Hidden class styling */
 .hidden {
   display: none;
 }
 
+/* Laps styling */
 .laps {
   max-height: 250px;
   overflow-y: auto;
@@ -112,4 +126,65 @@ button:active {
   background-color: #2d18e7;
 }
 
+/* Footer styling */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #2980b9, #7653ff);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
+/* Footer icon styling */
+footer i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    display: none;
+  }
+
+  #timerHeader {
+    display: none;
+  }
+
+  #quoteContainer {
+    text-align: center;
+  }
+
+  #nameContainer {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .name {
+    font-size: 1.2em;
+  }
+  .stopwatch-container {
+    padding: 30px;
+  }
+
+  .stopwatch {
+    font-size: 3em;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    padding: 15px 30px;
+  }
+}
+ 

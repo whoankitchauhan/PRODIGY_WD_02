@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Improved Stopwatch</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header id="timerHeader"></header> <!-- Header displaying the current time -->
-  <div class="stopwatch-container">
-    <div class="stopwatch" id="display">
-      00:00:00<span class="milliseconds">.000</span>
+  <body>
+    <header id="timerHeader">
+      <div id="quoteContainer">
+        <p id="quote">
+          "Time is what we want most, but what we use worst." - William Penn
+        </p>
+      </div>
+    </header>
+    <div class="stopwatch-container">
+      <div class="stopwatch" id="display">
+        00:00:00<span class="milliseconds">.00</span>
+      </div>
+      <div class="btns">
+        <button id="startStopBtn" onclick="startStop()">Start</button>
+        <button id="lapBtn" onclick="lap()" class="alternative-lap">Lap</button>
+        <button id="resetBtn" onclick="reset()">Reset</button>
+      </div>
+      <ul id="lapList" class="laps hidden"></ul>
     </div>
-    <div class="btns">
-      <button id="startStopBtn" onclick="startStop()">Start</button>
-      <button id="lapBtn" onclick="lap()" class="alternative-lap">Lap</button>
-      <button id="resetBtn" onclick="reset()">Reset</button>
-    </div>
-    <ul id="lapList" class="laps hidden"></ul>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <footer>
+      <a href="https://www.linkedin.com/in/whoankitchauhan" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <p>"Time is what we want most, but what we use worst." - William Penn</p>
 
+      <a href="https://github.com/whoankitchauhan" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/6fe3a48d7b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
